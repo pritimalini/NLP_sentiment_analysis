@@ -19,7 +19,7 @@ def train_model(features_filepath, labels_filepath, model_filepath):
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
-    print(f"Accuracy: {accuracy_score(y_test, y_pred):.2f}")
+    print(f"Accuracy is here : {accuracy_score(y_test, y_pred):.2f}")
 
     with open(model_filepath, "wb") as f:
         pickle.dump(model, f)
